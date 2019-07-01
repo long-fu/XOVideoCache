@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085F2F8922CA35A600EA498D /* XOVideoRequestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F2F8822CA35A600EA498D /* XOVideoRequestTask.swift */; };
 		08AB5DC022CA180B00112DDE /* XOVideoCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AB5DB622CA180B00112DDE /* XOVideoCache.framework */; };
 		08AB5DC522CA180B00112DDE /* XOVideoCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB5DC422CA180B00112DDE /* XOVideoCacheTests.swift */; };
 		08AB5DC722CA180B00112DDE /* XOVideoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 08AB5DB922CA180B00112DDE /* XOVideoCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085F2F8822CA35A600EA498D /* XOVideoRequestTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOVideoRequestTask.swift; sourceTree = "<group>"; };
 		08AB5DB622CA180B00112DDE /* XOVideoCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XOVideoCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08AB5DB922CA180B00112DDE /* XOVideoCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XOVideoCache.h; sourceTree = "<group>"; };
 		08AB5DBA22CA180B00112DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				08AB5DB922CA180B00112DDE /* XOVideoCache.h */,
 				08AB5DBA22CA180B00112DDE /* Info.plist */,
+				085F2F8822CA35A600EA498D /* XOVideoRequestTask.swift */,
 			);
 			path = XOVideoCache;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				TargetAttributes = {
 					08AB5DB522CA180B00112DDE = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					08AB5DBE22CA180B00112DDE = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -378,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085F2F8922CA35A600EA498D /* XOVideoRequestTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +584,7 @@
 		08AB5DCB22CA180B00112DDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -596,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = onelcat.github.io.XOVideoCache;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -604,6 +611,7 @@
 		08AB5DCC22CA180B00112DDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -629,6 +637,7 @@
 		08AB5DCE22CA180B00112DDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3UY5TBH2C;
 				INFOPLIST_FILE = XOVideoCacheTests/Info.plist;
@@ -647,6 +656,7 @@
 		08AB5DCF22CA180B00112DDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3UY5TBH2C;
 				INFOPLIST_FILE = XOVideoCacheTests/Info.plist;
