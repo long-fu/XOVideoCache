@@ -32,10 +32,10 @@ class PlayVideoViewController: UIViewController {
         guard let url = resourceURL else {
             fatalError()
         }
-
+        //AVPlayerItem(url: url) //
         self._playerItem = CachingPlayerItem(url: url, customFileExtension: url.lastPathComponent)
         self._playerItem?.delegate = self
-        self._playerItem?.download()
+//        self._playerItem?.download()
         
         self._player = AVPlayer(playerItem: self._playerItem)
         self._playerLayer = AVPlayerLayer(player: self._player)
@@ -48,7 +48,7 @@ class PlayVideoViewController: UIViewController {
         self._playerLayer?.videoGravity = .resizeAspect //视频填充模式
         
         self.view.layer.addSublayer(self._playerLayer!)
-        
+//        __addPlayerItemObserver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,6 +86,7 @@ class PlayVideoViewController: UIViewController {
             if object.status == .readyToPlay { //当资源准备好播放，那么开始播放视频
 //                SVProgressHUD.dismiss()
                 _player?.play()
+                debugPrint("开始播放")
 //                _durationLabel.text = __formatPlayTime(seconds: CMTimeGetSeconds(object.duration))
                 self.__addProgressObserver()
             } else if object.status == .failed || object.status == .unknown {

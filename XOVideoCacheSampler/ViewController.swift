@@ -35,10 +35,10 @@ class ViewController: UIViewController {
         }
         let vc = PlayVideoViewController()
         if button == video1Button {
-            vc.resourceURL = URL(string: "https://vodm0pihssv.vod.126.net/edu-video/nos/mp4/2017/4/2/1006075895_7ef266a2-85f6-4d8d-bb21-3b9332c342f4_sd.mp4")!
+            vc.resourceURL = URL(string: "https://vodm0pihssv.vod.126.net/edu-video/nos/mp4/2017/4/2/1006075895_7ef266a2-85f6-4d8d-bb21-3b9332c342f4_sd.mp4")! // video/mp4
         }
         else if button == video2Button {
-            vc.resourceURL = URL(string: "https://apd-6da2d2ea49ade3248ca234fb8d8bae58.v.smtcdns.com/vweishi.tc.qq.com/AO5GtBLZz7QFEvE2LM01SnkfXoGNHfRBS_Uy95paEgY0/szg_10167773_40000_1b349e70032744309573336427a77bd6.f10.mp4?sdtfrom=v1103&guid=e737d5ae0915fdc9b2cc873c22147fef&vkey=BA1AB085D38353999F76C09D7E1A3AE11494A3694FCB04CEBBEF94E0A50EE10DD576086F64711AF2E718F5A407F41C0A56A78B9F1E1D2182E748C6B5B4186F0FE0F02F35923F3299B4877DF68A91E701721A7899108C828CD1FB7F47827240642E9506E6F836D9A5DB2A6D61DC23C6B47017D5BC020569350F8DE18ED4127FE7")!
+            vc.resourceURL = URL(string: "https://raw.githubusercontent.com/onelcat/Resource/master/cache.mp4")!
         }
         else if button == video3Button {
             vc.resourceURL = URL(string: "https://apd-2302da32dd361333d3766a61badbd4e3.v.smtcdns.com/vweishi.tc.qq.com/AEApKWP0Cpl8fnkapa4KoHQX1-su8wdFn8MFmBPlj5Eo/szg_42622107_40000_4d2c2090c980422c861e4f26fd68418f.f10.mp4?sdtfrom=v1103&guid=e737d5ae0915fdc9b2cc873c22147fef&vkey=2A84349C0817CEA02A679891BDE1CD06F733D2F58B24B39B9F253BC97F349AD054719B7581EA2D0F85421502E2A6B1434BD75952165665BBE95D9597319397A34F05D309C188D5A6E5906621133A698825AF0CABCB53F5178615268FF3344D838F74F67A739C97E8E5629E5F10B497CFD44D3952A0A0F059E6D373E834FF55A9")!
