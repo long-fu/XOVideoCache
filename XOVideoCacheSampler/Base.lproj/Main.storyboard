@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lm5-7h-SfL">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,86 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XOVideoCacheSampler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoQ-AZ-SjP">
+                                <rect key="frame" x="184" y="335" width="49" height="30"/>
+                                <state key="normal" title="Video2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dI-4j-3lf">
+                                <rect key="frame" x="184" y="248" width="46" height="30"/>
+                                <state key="normal" title="Video1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaE-Ol-z8e">
+                                <rect key="frame" x="184" y="422" width="49" height="30"/>
+                                <state key="normal" title="Video3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqO-Of-LA8">
+                                <rect key="frame" x="184" y="502" width="49" height="30"/>
+                                <state key="normal" title="Video4"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EaE-Ol-z8e" firstAttribute="leading" secondItem="jqO-Of-LA8" secondAttribute="leading" id="9gh-jO-lvc"/>
+                            <constraint firstItem="NoQ-AZ-SjP" firstAttribute="top" secondItem="6dI-4j-3lf" secondAttribute="bottom" constant="57" id="Jyw-RT-nGl"/>
+                            <constraint firstItem="6dI-4j-3lf" firstAttribute="leading" secondItem="NoQ-AZ-SjP" secondAttribute="leading" id="QFN-Oi-jxl"/>
+                            <constraint firstItem="jqO-Of-LA8" firstAttribute="top" secondItem="EaE-Ol-z8e" secondAttribute="bottom" constant="50" id="ZLP-ng-XUY"/>
+                            <constraint firstItem="6dI-4j-3lf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="bhH-8n-aHv"/>
+                            <constraint firstItem="6dI-4j-3lf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n4Y-Uv-E7r"/>
+                            <constraint firstItem="NoQ-AZ-SjP" firstAttribute="leading" secondItem="EaE-Ol-z8e" secondAttribute="leading" id="s8a-By-q0d"/>
+                            <constraint firstItem="EaE-Ol-z8e" firstAttribute="top" secondItem="NoQ-AZ-SjP" secondAttribute="bottom" constant="57" id="zMq-gi-6rR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fhF-JU-QoD"/>
+                    <connections>
+                        <outlet property="video1Button" destination="6dI-4j-3lf" id="G7O-i6-csc"/>
+                        <outlet property="video2Button" destination="NoQ-AZ-SjP" id="xvA-ll-VWO"/>
+                        <outlet property="video3Button" destination="EaE-Ol-z8e" id="Vi7-JL-9pt"/>
+                        <outlet property="video4Button" destination="jqO-Of-LA8" id="kWS-jb-hpc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="457" y="355"/>
+        </scene>
+        <!--视频-->
+        <scene sceneID="X8B-Ea-IXc">
+            <objects>
+                <viewController title="视频" id="GrI-GN-CEs" customClass="PlayVideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWa-Ty-Upf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="u0u-dF-uoL"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nf3-EU-Kyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="371"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zOu-zH-dBb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lm5-7h-SfL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z61-8T-d4C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t8L-az-mGB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J40-Va-hvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-504" y="404"/>
         </scene>
     </scenes>
 </document>
