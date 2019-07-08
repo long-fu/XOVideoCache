@@ -223,6 +223,7 @@ extension PlayVideoViewController: CachingPlayerItemDelegate {
     
     func playerItem(_ playerItem: CachingPlayerItem, didFinishDownloadingData data: Data) {
         debugPrint("视频下载完成", data.count)
+        _player?.pause()
     }
     
     func playerItem(_ playerItem: CachingPlayerItem, didReceive data: Data, didDownloadBytesSoFar bytesDownloaded: Int, outOf bytesExpected: Int) {
